@@ -31,9 +31,26 @@ public class AFD_1 {
             qerro();
         }
     }
-    public void q1(){}
-    public void q2(){} 
-    public void q3(){}
+    public void q1(){
+         if(CONT < PALAVRA.length){
+            if(PALAVRA[CONT] == 'b'){
+            CONT++;
+            q2();
+            }
+        } else {
+            qerro();
+        }
+    }
+    public void q2(){
+         if(CONT < PALAVRA.length){
+            if(PALAVRA[CONT] == 'b'){
+            CONT++;
+            q0();
+            }
+        } else {
+            qerro();
+        }
+    } 
     public void qf(){
         System.out.println("Palavra validada com sucesso pelo Autômato! Estado Final.");
     }
