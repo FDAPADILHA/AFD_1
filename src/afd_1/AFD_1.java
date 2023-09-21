@@ -25,13 +25,21 @@ public class AFD_1 {
             CONT++;
             q1();
             }
+        } else if (PALAVRA[CONT] == 'c'){
+            qf();
+        } else {
+            qerro();
         }
     }
     public void q1(){}
     public void q2(){} 
     public void q3(){}
-    public void qf(){}
-    public void qerro(){}
+    public void qf(){
+        System.out.println("Palavra validada com sucesso pelo Autômato! Estado Final.");
+    }
+    public void qerro(){
+        System.out.println("Palavra não passou na validação do Autômato.");
+    }
         
     
        
