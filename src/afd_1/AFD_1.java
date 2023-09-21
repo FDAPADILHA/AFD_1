@@ -4,7 +4,7 @@ package afd_1;
 import java.util.Scanner;
 
 public class AFD_1 {
-    int COUNT ;
+    int CONT ;
     char PALAVRA[];
     public static void main(String[] args) {
         AFD_1 AUT = new AFD_1();
@@ -12,10 +12,21 @@ public class AFD_1 {
         Scanner ENTRADA = new Scanner(System.in);
         System.out.println("Insira a entrada para o Autômato: ");
         SENTENCA = ENTRADA.nextLine();
+        AUT.PALAVRA = SENTENCA.toCharArray();
         AUT.Iniciar();
    }
-    public void Iniciar(){ }
-    public void q0(){}
+    public void Iniciar(){
+        CONT = 0;
+        q0();
+    }
+    public void q0(){
+        if(CONT < PALAVRA.length){
+            if(PALAVRA[CONT] == 'a'){
+            CONT++;
+            q1();
+            }
+        }
+    }
     public void q1(){}
     public void q2(){} 
     public void q3(){}
